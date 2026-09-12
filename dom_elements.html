@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+            font-family: Arial, sans-serif;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Example 1: Change Text -->
+    <h3>Example 1 - Change Text</h3>
+
+    <h1 id="title">Hello Its Sachitt</h1>
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        function changeText() {
+            document.getElementById('title').innerHTML = 'I am From Nanded';
+        }
+    </script>
+
+    <hr>
+
+
+    <!-- Example 2: Change Style -->
+    <h3>Change Style Using DOM</h3>
+
+    <p id="msg">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Facere ut a quo quas. Cupiditate earum veritatis atque fuga
+        iure ea fugit, inventore pariatur ratione totam optio
+        consequatur soluta provident nulla?
+    </p>
+
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            document.getElementById('msg').style.color = 'brown';
+        }
+    </script>
+
+    <hr>
+
+
+    <!-- Example 3: Change Image -->
+    <h3>Change Image Using DOM</h3>
+
+    <img id="myImg"
+         src="images/plant rectangle5.jpeg"
+         width="300">
+
+    <br><br>
+
+    <button onclick="changeImage()">Change Image</button>
+
+    <script>
+        function changeImage() {
+            document.getElementById('myImg').src =
+                'images/plant rectangle4.jpg';
+        }
+    </script>
+
+    <hr>
+
+
+    <!-- Example 4: Get Input -->
+    <h3>Get Input From User and Display</h3>
+
+    <input type="text"
+           id="nameInput"
+           placeholder="Enter Name">
+
+    <button onclick="showName()">Submit</button>
+
+    <h2 id="output"></h2>
+
+    <script>
+        function showName() {
+            let name =
+                document.getElementById('nameInput').value;
+
+            document.getElementById('output').innerHTML =
+                'Hello Welcome ' + name;
+        }
+    </script>
+
+    <hr>
+
+
+    <!-- Example 5: Increase / Decrease Font -->
+    <h3>Change Font Using + , -</h3>
+
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique, dolorem omnis. Amet unde cum tenetur eligendi
+        laudantium at, totam labore eum possimus, necessitatibus
+        qui culpa magnam vel saepe similique. Doloremque.
+    </p>
+
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+
+    <script>
+        let size = 16;
+
+        function increase() {
+            size++;
+
+            document.getElementById('para').style.fontSize =
+                size + 'px';
+        }
+
+        function decrease() {
+            size--;
+
+            document.getElementById('para').style.fontSize =
+                size + 'px';
+        }
+    </script>
+
+    <hr>
+
+
+    <!-- Example 6: Toggle Theme -->
+    <h3>Toggle Theme</h3>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+
+</html>
+```
